@@ -18,7 +18,7 @@ This directory provides scripts for running several well known models on the FPG
   ```
 
    Download a minimal validation set for [Imagenet2012](http://www.image-net.org/challenges/LSVRC/2012) using [Collective Knowledge (CK)](https://github.com/ctuning).
-   > **Note:** 버클리에서 받는 경우 파이썬이 오류로 
+   > **Note:** 버클리에서 받는 경우 파이썬이 오류로 꺼짐
 
    ```sh
    python -m ck pull repo:ck-env
