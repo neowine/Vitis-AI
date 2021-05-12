@@ -42,11 +42,11 @@ Vitis AI 도구 및 리소스로 컨테이너를 설치하기 위해 두 가지 
 
 
 ### 설치
- - 아직 Docker가 없는 경우에는 [Docker를 설치해주세요](docs/install_docker/README.md)
+ - 아직 Docker가 없는 경우에는 [Docker를 설치](docs/install_docker/README.md)해야 합니다.
 
- - [리눅스 사용자가 Docker를 사용할 수 있게 해 주세요](https://docs.docker.com/install/linux/linux-postinstall/)
+ - 그리고 [리눅스 일반 계정으로 Docker를 사용할 수 있도록 설정](https://docs.docker.com/install/linux/linux-postinstall/)해야 합니다.
 
- - Vitis-AI 저장소를 복제하여 예제, 참조 코드 및 스크립트를 얻으세요
+ - Vitis-AI 저장소를 복제하여 예제, 참조 코드 및 스크립트를 얻으십시오
     ```bash
     git clone --recurse-submodules https://github.com/Xilinx/Vitis-AI  
 
@@ -67,22 +67,21 @@ Docker를 실행하려면 다음 명령을 사용하십시오:
 ```
 #### 레시피에서 Docker 빌드
 
-There are two types of docker recipes provided - CPU recipe and GPU recipe. If you have a compatible nVidia graphics card with CUDA support, you could use GPU recipe; otherwise you could use CPU recipe.
 제공되는 도커 레시피에는 CPU 레시피와 GPU 레시피의 두 가지 유형이 있습니다.
 CUDA를 지원하는 호환되는 NVIDIA 그래픽 카드를 가지고 있는 경우 GPU 레시피를 사용할 수 있습니다. 그렇지 않으면 CPU 레시피를 사용하면 됩니다.
 
-**CPU Docker**
+**CPU Docker 사용하기**
 
-아래 명령을 사용하여 CPU 도커를 빌드하십시오.:
+CPU Docker 빌드:
 ```
 cd setup/docker
 ./docker_build_cpu.sh
 ```
-CPU 도커를 실행하려면 다음 명령을 사용하십시오:
+CPU Docker 실행:
 ```
 ./docker_run.sh xilinx/vitis-ai-cpu:latest
 ```
-**GPU Docker**
+**GPU Docker사용하기**
 
 GPU Docker 빌드:
 ```
@@ -93,8 +92,8 @@ GPU Docker 실행:
 ```
 ./docker_run.sh xilinx/vitis-ai-gpu:latest
 ```
-Please use the file **./docker_run.sh** as a reference for the docker launching scripts, you could make necessary modification to it according to your needs.
-More Detail can be found here: [Run Docker Container](docs/install_docker/load_run_docker.md)
+**./docker_run.sh** 파일을 docker 시작 스크립트에 대한 참조로 사용하십시오. 필요에 따라 **./docker_run.sh** 파일을 수정할 수 있습니다.
+자세한 내용은 [Docker 컨테이너 실행하기](docs/install_docker/load_run_docker.md)에서 찾을 수 있습니다.
 
 **X11 Support for Running Vitis AI Docker with Alveo**
 
