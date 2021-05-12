@@ -17,14 +17,14 @@ Xilinx&reg; Vitis&trade;AI는 에지 장치와 Alveo 카드를 포함한 Xilinx 
 <br />
 Vitis AI is composed of the following key components:
 
-* **AI Model Zoo**  - A comprehensive set of pre-optimized models that are ready to deploy on Xilinx devices.
-* **AI Optimizer** - An optional model optimizer that can prune a model by up to 90%. It is separately available with commercial licenses.
-* **AI Quantizer** - A powerful quantizer that supports model quantization, calibration, and fine tuning.
-* **AI Compiler** - Compiles the quantized model to a high-efficient instruction set and data flow.
-* **AI Profiler** - Perform an in-depth analysis of the efficiency and utilization of AI inference implementation.
-* **AI Library** - Offers high-level yet optimized C++ APIs for AI applications from edge to cloud.
-* **DPU** - Efficient and scalable IP cores can be customized to meet the needs for many different applications.
-  * For more details on the different DPUs available, refer to [DPU Naming](docs/learn/dpu_naming.md).
+* **AI 모델 Zoo**  - Xilinx 장치에 배포할 준비가 된 사전 최적화 모델 세트입니다.
+* **AI 옵티마이저** - 모델을 최대 90%까지 정리할 수있는 선택적 모델 최적화 프로그램입니다. 상업용 라이센스와 별도로 사용할 수 있습니다.
+* **AI 퀀타이저** - 모델 양자화, 보정 및 미세 조정을 지원하는 강력한 퀀타이저입니다.
+* **AI 컴파일러** - 양자화 된 모델을 고효율 명령 세트 및 데이터 흐름으로 컴파일합니다.
+* **AI 프로파일러** - AI 추론 구현의 효율성 및 활용도에 대한 심층 분석을 수행합니다.
+* **AI 라이브러리** - 엣지에서 클라우드까지 AI 애플리케이션을 위한 높은 수준의 최적화된 C++ API를 제공합니다.
+* **DPU** - 효율적이고 확장 가능한 IP 코어는 다양한 애플리케이션의 요구 사항을 충족하도록 사용자 정의할 수 있습니다.
+  * 사용 가능한 다양한 DPU에 대한 자세한 내용은 [DPU Naming](docs/learn/dpu_naming.md)을 참조하십시오.
 
 
 **더 알아보기:** [Vitis AI Overview](https://www.xilinx.com/products/design-tools/vitis/vitis-ai.html)  
@@ -55,38 +55,41 @@ Vitis AI 도구 및 리소스로 컨테이너를 설치하기 위해 두 가지 
 
 #### 사전 빌드된 Docker 이미지 사용
 
-아래 명령을 사용해 최신 Vitis AI 이미지를 다운로드하세요. 이 컨테이너는 CPU에서 작동합니다.  
+아래 명령을 사용해 최신 Vitis AI 이미지를 다운로드하십시오.
+이 컨테이너는 CPU에서 작동합니다.  
 ```
 docker pull xilinx/vitis-ai-cpu:latest  
 ```
 
-To run the docker, use command:
+Docker를 실행하려면 다음 명령을 사용하십시오:
 ```
 ./docker_run.sh xilinx/vitis-ai-cpu:latest
 ```
-#### Building Docker from Recipe
+#### 레시피에서 Docker 빌드
 
 There are two types of docker recipes provided - CPU recipe and GPU recipe. If you have a compatible nVidia graphics card with CUDA support, you could use GPU recipe; otherwise you could use CPU recipe.
+제공되는 도커 레시피에는 CPU 레시피와 GPU 레시피의 두 가지 유형이 있습니다.
+CUDA를 지원하는 호환되는 NVIDIA 그래픽 카드를 가지고 있는 경우 GPU 레시피를 사용할 수 있습니다. 그렇지 않으면 CPU 레시피를 사용하면 됩니다.
 
 **CPU Docker**
 
-Use below commands to build the CPU docker:
+아래 명령을 사용하여 CPU 도커를 빌드하십시오.:
 ```
 cd setup/docker
 ./docker_build_cpu.sh
 ```
-To run the CPU docker, use command:
+CPU 도커를 실행하려면 다음 명령을 사용하십시오:
 ```
 ./docker_run.sh xilinx/vitis-ai-cpu:latest
 ```
 **GPU Docker**
 
-Use below commands to build the GPU docker:
+GPU Docker 빌드:
 ```
 cd setup/docker
 ./docker_build_gpu.sh
 ```
-To run the GPU docker, use command:
+GPU Docker 실행:
 ```
 ./docker_run.sh xilinx/vitis-ai-gpu:latest
 ```
