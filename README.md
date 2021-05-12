@@ -85,7 +85,7 @@ CPU Docker 실행:
 ```
 ./docker_run.sh xilinx/vitis-ai-cpu:latest
 ```
-**GPU Docker사용하기**
+**GPU Docker 사용하기**
 
 GPU Docker 빌드:
 ```
