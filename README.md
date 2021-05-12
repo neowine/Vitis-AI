@@ -43,6 +43,10 @@ Vitis AI 도구 및 리소스로 컨테이너를 설치하기 위해 두 가지 
 
 ### 설치
  - 아직 Docker가 없는 경우에는 [Docker를 설치](docs/install_docker/README.md)해야 합니다.
+ - Docker 설치 중 `dial unix /var/run/docker.sock: connect: permission denied` 오류가 발생하는 경우
+ ```bash
+ sudo chmod 666 /var/run/docker.sock
+ ```
 
  - 그리고 [리눅스 일반 계정으로 Docker를 사용할 수 있도록 설정](https://docs.docker.com/install/linux/linux-postinstall/)해야 합니다.
 
