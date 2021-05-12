@@ -3,9 +3,10 @@
 </div>
 
 <br />
-Xilinx&reg; Vitis&trade; AI is a development stack for AI inference on Xilinx hardware platforms, including both edge devices and Alveo cards.
+Xilinx&reg; Vitis&trade;AI는 에지 장치와 Alveo 카드를 포함한 Xilinx 하드웨어 플랫폼에서 사용하는 AI 인퍼런스를 위한 개발 스택입니다.
 
-It consists of optimized IP, tools, libraries, models, and example designs. It is designed with high efficiency and ease of use in mind, unleashing the full potential of AI acceleration on Xilinx FPGA and ACAP.  
+최적화된 IP, 도구, 라이브러리, 모델 및 예제 디자인으로 구성됩니다.
+고효율과 사용 편의성을 염두에두고 설계되어 Xilinx FPGA 및 ACAP에서 AI 가속의 잠재력을 최대한 발휘합니다.
 <br />
 <br />
 
@@ -26,42 +27,35 @@ Vitis AI is composed of the following key components:
   * For more details on the different DPUs available, refer to [DPU Naming](docs/learn/dpu_naming.md).
 
 
-**Learn More:** [Vitis AI Overview](https://www.xilinx.com/products/design-tools/vitis/vitis-ai.html)  
+**더 알아보기:** [Vitis AI Overview](https://www.xilinx.com/products/design-tools/vitis/vitis-ai.html)  
 
 
-## [See What's New](docs//learn/release_notes.md)
-- [Release Notes](docs//learn/release_notes.md)
-- Added support for Pytorch and Tensorflow 2.3 frameworks
-- Added more ready-to-use AI models for a wider range of applications, including 3D point cloud detection and segmentation, COVID-19 chest image segmentation and other reference models
-- Unified XIR-based compilation flow from edge to cloud
-- Vitis AI Runtime (VART) fully open source
-- New RNN overlay for NLP applications
-- New CNN DPUs for the low-latency and higher throughput applications on Alveo cards
-- EoU enhancement with Beta version model partitioning and custom layer/operators plug-in
+## [새로운 기능 보기](docs//learn/release_notes.md)
+- [릴리즈 노트](docs//learn/release_notes.md)
 
-## Getting Started
+## 시작
 
-Two options are available for installing the containers with the Vitis AI tools and resources.
+Vitis AI 도구 및 리소스로 컨테이너를 설치하기 위해 두 가지 옵션을 사용할 수 있습니다.
 
- - Pre-built containers on Docker Hub: [xilinx/vitis-ai](https://hub.docker.com/r/xilinx/vitis-ai/tags)
- - Build containers locally with Docker recipes: [Docker Recipes](setup/docker)
+ - Docker Hub에 있는 사전 빌드된 컨테이너: [xilinx/vitis-ai](https://hub.docker.com/r/xilinx/vitis-ai/tags)
+ - Docker 레시피를 사용하여 로컬에서 컨테이너 빌드: [Docker Recipes](setup/docker)
 
 
-### Installation
- - [Install Docker](docs/install_docker/README.md) - if Docker not installed on your machine yet
+### 설치
+ - 아직 Docker가 없는 경우에는 [Docker를 설치해주세요](docs/install_docker/README.md)
 
- - [Ensure your linux user is in the group docker](https://docs.docker.com/install/linux/linux-postinstall/)
+ - [리눅스 사용자가 Docker를 사용할 수 있게 해 주세요](https://docs.docker.com/install/linux/linux-postinstall/)
 
- - Clone the Vitis-AI repository to obtain the examples, reference code, and scripts.
+ - Vitis-AI 저장소를 복제하여 예제, 참조 코드 및 스크립트를 얻으세요
     ```bash
     git clone --recurse-submodules https://github.com/Xilinx/Vitis-AI  
 
     cd Vitis-AI
     ```
 
-#### Using Pre-built Docker
+#### 사전 빌드된 Docker 이미지 사용
 
-Download the latest Vitis AI Docker with the following command. This container runs on CPU.  
+아래 명령을 사용해 최신 Vitis AI 이미지를 다운로드하세요. 이 컨테이너는 CPU에서 작동합니다.  
 ```
 docker pull xilinx/vitis-ai-cpu:latest  
 ```
