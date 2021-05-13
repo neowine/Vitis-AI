@@ -24,7 +24,9 @@ This directory provides scripts for running several well known models on the FPG
    python -m ck pull repo:ck-env
    python -m ck install package:imagenet-2012-val-min
    python -m ck install package:imagenet-2012-aux
-   head -n 500 ~/CK-TOOLS/dataset-imagenet-ilsvrc2012-aux/val.txt > ~/CK-TOOLS/dataset-imagenet-ilsvrc2012-val-min/val.txt
+   # head -n 500 ~/CK-TOOLS/dataset-imagenet-ilsvrc2012-aux/val.txt > ~/CK-TOOLS/dataset-imagenet-ilsvrc2012-val-min/val.txt
+   # 자신의 validation set 경로로 변경 필요.
+   head -n 500 ./home/vitis-ai-user/CK-TOOLS/dataset-imagenet-ilsvrc2012-aux-from.dividiti/val.txt > ~/CK-TOOLS/dataset-imagenet-ilsvrc2012-val-min/val.txt
    ```
 
    Download Samples Models (will be downloaded into `./models` directory).
